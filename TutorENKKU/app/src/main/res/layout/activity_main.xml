@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/welcomeTOapp"
+        app:lottie_fileName="animation-w430-h660.json"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true" />
+
+    <TextView
+        android:id="@+id/welcomeTOapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvusername"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/welcome"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/tvusername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="60dp"
+        android:text="@string/tvuser"
+        android:textColor="@color/white"
+
+
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/tvpassword"
+        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvusername"
+        android:layout_alignLeft="@+id/tvusername"
+        android:text="@string/tvpassword"
+        android:textColor="@color/white"
+
+        android:textSize="16dp" />
+    <EditText
+        android:id="@+id/ETuser"
+        android:layout_alignBaseline="@+id/tvusername"
+        android:layout_toRightOf="@+id/tvusername"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColor="@color/white"
+         />
+
+    <EditText
+        android:id="@+id/ETpassword"
+        android:layout_alignBaseline="@+id/tvpassword"
+        android:layout_toRightOf="@+id/tvpassword"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+         />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvpassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:padding="12dp"
+        android:background="@color/colorAccent"
+        android:text="@string/btlogin"
+        android:textColor="@color/white" />
+
+
+</RelativeLayout>

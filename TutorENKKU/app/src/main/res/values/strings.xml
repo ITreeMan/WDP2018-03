@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TutorENKKU</string>
+    <string name="welcome">Welcome to Tutor EN KKU</string>
+    <string name="tvpassword">Password   </string>
+    <string name="tvuser">Username   </string>
+    <string name="btlogin">Login</string>
+    <string-array name="my_subject">
+        <item>calculus I</item>
+        <item>calculus II</item>
+        <item>calculus III</item>
+        <item>physics</item>
+        <item>differential</item>
+    </string-array>
+</resources>
