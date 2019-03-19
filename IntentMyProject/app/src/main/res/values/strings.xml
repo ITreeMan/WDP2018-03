@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">IntentMyProject</string>
+    <string name="faq">FAQ</string>
+    <string name="mail">Email Address</string>
+    <string name="subject">Subject</string>
+    <string name="message">Message</string>
+    <string name="send">Send</string>
+    <string name="sure">Are you sure?</string>
+</resources>
