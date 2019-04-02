@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FAQActivity"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/layout_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="80dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/colorRedApp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_top_app"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animation_view"
+                    android:layout_marginTop="@dimen/margin_top_app"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/margin_top_app"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="fix.json"
+                    app:lottie_loop="true"
+                    android:scaleX="-1"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/app_name" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_space_left_subject"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="@dimen/margin_space_right_subject">
+
+            <ScrollView
+                android:id="@+id/scroll_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:fillViewport="true"
+                android:measureAllChildren="false"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/head_Lorem_Ipsum"
+                        android:textSize="@dimen/tv_head_faq"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/message_Lorem_Ipsum"
+                        android:textSize="@dimen/tv_message_faq"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/head_Lorem_Ipsum"
+                        android:textSize="@dimen/tv_head_faq"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/message_Lorem_Ipsum"
+                        android:textSize="@dimen/tv_message_faq"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/head_Lorem_Ipsum"
+                        android:textSize="@dimen/tv_head_faq"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/message_Lorem_Ipsum"
+                        android:textSize="@dimen/tv_message_faq"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/margin_top_any_question">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/any_question"
+                            android:textSize="30dp" />
+
+                        <requestFocus />
+
+                        <EditText
+                            android:id="@+id/editTextAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="15"
+                            android:freezesText="true"
+                            android:hint="@string/mail"
+                            android:inputType="textEmailAddress"
+                            android:singleLine="true" />
+
+                        <EditText
+                            android:id="@+id/editTextSubject"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="15"
+                            android:freezesText="true"
+                            android:hint="@string/subject"
+                            android:singleLine="true" />
+
+                        <EditText
+                            android:id="@+id/editTextMessage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="15"
+                            android:freezesText="true"
+                            android:hint="@string/message"
+                            android:lines="6" />
+
+                        <Button
+                            android:id="@+id/buttonIntent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="send"
+                            android:onClick="okButtonClicked"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <View
+        style="@style/Divider.Horizontal"
+        android:layout_above="@+id/layout_menu" />
+
+    <LinearLayout
+        android:id="@+id/layout_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/btn_home"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_menu_bottom_height"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="goToHome"
+            android:text="@string/tv_home"
+            android:textColor="@color/colorRedApp"
+            android:textSize="@dimen/tv_bottom_menu" />
+
+        <TextView
+            android:onClick="goToFAQ"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_menu_bottom_height"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+
+            android:text="@string/tv_faq"
+            android:textColor="@color/colorRedApp"
+            android:textSize="@dimen/tv_bottom_menu" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <View
+            android:id="@+id/btn_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-3dp"
+            android:background="@drawable/search_circle"
+
+            />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_search"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="animation-w600-h600.json"
+            app:lottie_loop="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

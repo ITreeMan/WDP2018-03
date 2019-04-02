@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_name">30sp</dimen>
+    <dimen name="tv_top_menu">18sp</dimen>
+    <dimen name="tv_bottom_menu">18sp</dimen>
+    <dimen name="tv_below_menu">16sp</dimen>
+    <dimen name="tv_subject">12sp</dimen>
+    <dimen name="tv_head_faq">18sp</dimen>
+    <dimen name="tv_message_faq">14sp</dimen>
+
+    <dimen name="margin_top_app">10dp</dimen>
+    <dimen name="margin_space_top_subject">20dp</dimen>
+    <dimen name="margin_space_left_subject">10dp</dimen>
+    <dimen name="margin_space_right_subject">10dp</dimen>
+    <dimen name="margin_space_book">15dp</dimen>
+    <dimen name="margin_space_subject_bottom_book">5dp</dimen>
+    <dimen name="margin_line_top">20dp</dimen>
+    <dimen name="margin_top_any_question">30dp</dimen>
+
+
+    <dimen name="btn_width">5dp</dimen>
+    <dimen name="btn_height">5dp</dimen>
+    <dimen name="v_book_width">82.67dp</dimen>
+    <dimen name="v_book_height">116.93dp</dimen>
+    <dimen name="btn_menu_bottom_height">50dp</dimen>
+</resources>
