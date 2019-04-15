@@ -1,37 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/white"
     android:layout_width="300dp"
-    android:layout_height="300dp"
+    android:layout_height="250dp"
     android:orientation="vertical"
-    android:layout_gravity="center">
-    <TextView
-        android:id="@+id/closePopup"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:layout_gravity="end"
-        android:text="X"/>
-    <TextView
-        android:layout_width="wrap_content"
+    android:background="@color/white"
+    android:layout_gravity="center"
+    android:elevation="5dp"
+    android:padding="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tv_diff"
-        android:textSize="@dimen/tv_top_menu"
-        android:layout_gravity="center"/>
+        android:layout_marginRight="@dimen/margin_space_right_subject"
+        android:layout_marginLeft="@dimen/margin_space_left_subject">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_diff"
+            android:textSize="@dimen/tv_top_menu"
+            android:layout_gravity="center"/>
+        <TextView
+            android:onClick="goToHome"
+            android:id="@+id/closePopup"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_alignParentRight="true"
+            android:text="X"/>
+    </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <WebView
-            android:id="@+id/mWebView"
+
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/youtube_player"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginTop="@dimen/tv_top_menu"/>
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:layout_marginTop="@dimen/margin_top_app"/>
         <Button
-            android:id="@+id/btVideo"
-            android:onClick="ShowpopupPdfdiff"
+            android:onClick="openPdf"
+            android:id="@+id/btPDF"
             android:layout_width="60dp"
             android:layout_height="30dp"
             android:text="@string/btn_pdf"
@@ -43,14 +56,14 @@
             android:background="@drawable/botton_styles"
             />
         <Button
-            android:id="@+id/btPdf"
+            android:id="@+id/btVideo"
             android:onClick="ShowpopupVideoDiff"
             android:layout_width="60dp"
             android:layout_height="30dp"
             android:text="@string/btn_video"
             android:textSize="@dimen/tv_subject"
             android:layout_margin="10dp"
-            android:layout_toLeftOf="@+id/btVideo"
+            android:layout_toLeftOf="@+id/btPDF"
             android:textColor="@color/white"
             android:layout_alignParentBottom="true"
             android:background="@drawable/botton_styles"

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">TutorENKKU</string>
+    <string name="tv_home">Home</string>
+    <string name="tv_faq">FAQ</string>
+    <string name="tv_tutorial">Tutorial</string>
+    <string name="tv_exam">Exam</string>
+    <string name="tv_calculus">Calculus</string>
+    <string name="tv_physics">Physics</string>
+    <string name="tv_comPro">Computer Programming</string>
+    <string name="tv_com">Calculus</string>
+    <string name="tv_diff">Differential Equation</string>
+    <string name="tv_Chem">Chemistry</string>
+
+
+    <string name="btn_pdf">PDF</string>
+    <string name="btn_video">Video</string>
+    <string name="faq">FAQ</string>
+    <string name="any_question">Any Question?</string>
+    <string name="mail">Email Address</string>
+    <string name="subject">Subject</string>
+    <string name="message">Message</string>
+    <string name="send">Send</string>
+    <string name="sure">Are you sure?</string>
+
+
+    <string name="head_Lorem_Ipsum">Lorem Ipsum</string>
+    <string name="message_Lorem_Ipsum">	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
+</resources>
+
