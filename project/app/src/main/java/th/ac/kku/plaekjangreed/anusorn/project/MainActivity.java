@@ -12,6 +12,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MainActivity extends AppCompatActivity {
     private Dialog dialogDiff;
     private TextView exam;
@@ -29,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,popup_diff.class));
             }
         });
+
+
     }
 
 
@@ -61,22 +66,36 @@ public class MainActivity extends AppCompatActivity {
     public void goToFAQ (View v) {
         openFAQActivity();
     }
+    public void goTosearch(View v){
+        openSearchActivity();
+    }
+
+    private void openSearchActivity() {
+        Intent intent = new Intent(this, SearchActivity.class);
+        startActivity(intent);
+        finish();
+
+    }
 
 
     private void openMainActivity() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 
     private void openExamActivity() {
         Intent intent = new Intent(this, ExamActivity.class);
         startActivity(intent);
+        finish();
     }
 
     private void openFAQActivity() {
         Intent intent = new Intent(this, FAQActivity.class);
         startActivity(intent);
+        finish();
     }
+
 
 
 }

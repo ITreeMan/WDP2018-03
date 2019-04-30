@@ -1,9 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SearchActivity">
+   <LinearLayout
+       android:id="@+id/line1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:weightSum="5">
+       <LinearLayout
+           android:layout_weight="0.5"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+           <ImageButton
+               android:id="@+id/btOk"
+               android:background="@android:color/transparent"
+               android:src="@drawable/searchicon"
+               android:layout_marginTop="10dp"
+               android:layout_marginLeft="20dp"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:scaleType="fitXY" />
+       </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+       <EditText
+           android:id="@+id/search"
+           android:layout_weight="4.5"
+           android:layout_width="0dp"
+           android:layout_marginRight="15dp"
+           android:background="@drawable/search_bar"
+           android:layout_marginTop="10dp"
+           android:padding="10dp"
+           android:layout_height="50dp" />
+
+
+   </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
+
+
+    <View
+        style="@style/Divider.Horizontal"
+        android:layout_above="@+id/layout_menu" />
+
+    <LinearLayout
+        android:id="@+id/layout_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/btn_home"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_menu_bottom_height"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="goToHome"
+            android:text="@string/tv_home"
+            android:textColor="@color/colorRedApp"
+            android:textSize="@dimen/tv_bottom_menu" />
+
+        <TextView
+            android:onClick="goToFAQ"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_menu_bottom_height"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+
+            android:text="@string/tv_faq"
+            android:textColor="@color/colorRedApp"
+            android:textSize="@dimen/tv_bottom_menu" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <View
+            android:id="@+id/btn_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-3dp"
+            android:background="@drawable/search_circle"
+
+            />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_search"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="animation-w600-h600.json"
+            app:lottie_loop="true" />
+        </RelativeLayout>
+
+
+
+</RelativeLayout>

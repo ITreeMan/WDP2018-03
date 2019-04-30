@@ -49,19 +49,34 @@ public class FAQActivity extends AppCompatActivity {
         openFAQActivity();
     }
 
+    public void goTosearch(View v){ openSearchActivity();}
+
+
+    private void openSearchActivity() {
+        Intent intent = new Intent(this, SearchActivity.class);
+        startActivity(intent);
+        finish();
+
+    }
+
+
+
 
     private void openMainActivity() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 
     private void openExamActivity() {
         Intent intent = new Intent(this, ExamActivity.class);
         startActivity(intent);
+        finish();
     }
 
     private void openFAQActivity() {
         Intent intent = new Intent(this, FAQActivity.class);
         startActivity(intent);
+        finish();
     }
 }
