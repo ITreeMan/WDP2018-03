@@ -10,12 +10,12 @@
     <string name="tv_physics">Physics</string>
     <string name="tv_comPro">Computer Programming</string>
     <string name="tv_com">Calculus</string>
-    <string name="tv_diff">Differential Equation</string>
+    <string name="tv_diff">Differential Equation Part1</string>
     <string name="tv_Chem">Chemistry</string>
 
 
     <string name="btn_pdf">PDF</string>
-    <string name="btn_video">Video</string>
+    <string name="btn_video">full screen</string>
     <string name="faq">FAQ</string>
     <string name="any_question">Any Question?</string>
     <string name="mail">Email Address</string>

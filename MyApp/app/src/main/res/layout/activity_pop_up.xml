@@ -19,6 +19,7 @@
             android:layout_marginLeft="@dimen/margin_space_left_subject">
 
             <TextView
+                android:id="@+id/titleVideo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tv_diff"
@@ -79,13 +80,29 @@
                 android:layout_alignParentBottom="true"
                 android:background="@drawable/botton_styles"
                 />
+            <Button
+                android:id="@+id/nextPart"
+                android:onClick="printNo"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:textColor="@color/white"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorAccent"
+                android:layout_toRightOf="@+id/previousPart"
+                android:textSize="10dp"
+                android:text="next"
+                />
+            <Button
+                android:id="@+id/previousPart"
+                android:onClick="printNo"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:layout_width="60dp"
+                android:background="@color/colorAccent"
+                android:layout_alignParentBottom="true"
+                android:layout_height="30dp"
+                android:text="previous"/>
         </RelativeLayout>
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btVideo"
-            android:entries="@array/videoDiff"
-            android:id="@+id/window_list">
-        </ListView>
+
     </LinearLayout>
 </LinearLayout>

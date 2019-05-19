@@ -91,10 +91,12 @@
                                     android:padding="5dp" />
 
                                 <View
+                                    android:id="@+id/laplaceTransform"
+                                    android:onClick="onClick"
                                     android:layout_width="@dimen/v_book_width"
                                     android:layout_height="@dimen/v_book_height"
                                     android:layout_marginRight="@dimen/margin_space_book"
-                                    android:background="@color/colorSubject" />
+                                    android:background="@drawable/laplace" />
 
                                 <View
                                     android:layout_width="@dimen/v_book_width"

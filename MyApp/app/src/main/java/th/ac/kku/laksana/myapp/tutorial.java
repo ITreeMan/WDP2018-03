@@ -22,11 +22,24 @@ public class tutorial extends Fragment  {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.tutorial_fragment,container,false);
         View Viewdiff = (View) view.findViewById(R.id.diff);
+        View Viewlaplace = (View) view.findViewById(R.id.laplaceTransform);
         Viewdiff.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(),popUpActivity.class);
+                intent.putExtra("Massage","diff");
                 startActivity(intent);
+
+            }
+        });
+        Viewlaplace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),popUpActivity.class);
+                intent.putExtra("Massage","laplace");
+                startActivity(intent);
+
+
             }
         });
 
