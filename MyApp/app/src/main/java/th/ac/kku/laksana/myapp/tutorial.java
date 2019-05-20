@@ -27,7 +27,6 @@ public class tutorial extends Fragment  {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(),popUpActivity.class);
-                intent.putExtra("Massage","diff");
                 startActivity(intent);
 
             }
@@ -35,8 +34,7 @@ public class tutorial extends Fragment  {
         Viewlaplace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),popUpActivity.class);
-                intent.putExtra("Massage","laplace");
+                Intent intent = new Intent(getActivity(),popUpActivity2.class);
                 startActivity(intent);
 
 

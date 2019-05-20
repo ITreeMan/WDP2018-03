@@ -22,7 +22,7 @@
                 android:id="@+id/titleVideo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tv_diff"
+                android:text="@string/tv_laplace"
                 android:textSize="@dimen/tv_top_menu"
                 android:layout_gravity="center"/>
             <TextView
@@ -60,6 +60,37 @@
                     android:id="@+id/videoView4"
                     android:layout_width="match_parent"
                     android:layout_height="170dp" />
+                <VideoView
+                    android:id="@+id/videoView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp" />
+
+                <VideoView
+                    android:id="@+id/videoView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp" />
+
+                <VideoView
+                    android:id="@+id/videoView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp" />
+
+                <VideoView
+                    android:id="@+id/videoView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp" />
+                <VideoView
+                    android:id="@+id/videoView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp" />
+                <VideoView
+                    android:id="@+id/videoView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp" />
+                <VideoView
+                    android:id="@+id/videoView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp" />
 
             </ViewFlipper>
 
@@ -81,7 +112,7 @@
                 android:background="@drawable/botton_styles"
                 />
             <Button
-                android:id="@+id/btfullsrceen"
+                android:id="@+id/btfullscreen"
                 android:onClick="ShowpopupVideoDiff"
                 android:layout_width="60dp"
                 android:layout_height="30dp"
