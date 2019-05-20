@@ -64,8 +64,6 @@
             </ViewFlipper>
 
 
-
-
             <Button
                 android:onClick="openPdf"
                 android:id="@+id/btPDF"
@@ -81,7 +79,7 @@
                 android:background="@drawable/botton_styles"
                 />
             <Button
-                android:id="@+id/btfullsrceen"
+                android:id="@+id/btfull"
                 android:onClick="ShowpopupVideoDiff"
                 android:layout_width="60dp"
                 android:layout_height="30dp"

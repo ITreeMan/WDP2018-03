@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".popUpActivity2"></activity>
+        <activity android:name=".openfullScreen"
+            android:theme="@style/AppTheme.NoActionBarfull"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".popUpActivity2"
+            android:theme="@style/AppTheme.CustomTheme" />
         <activity
             android:name=".popUpActivity"
             android:theme="@style/AppTheme.CustomTheme" />

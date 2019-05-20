@@ -49,5 +49,12 @@
         <!--<item name="android:background" >#99000000</item>-->
     </style>
 
+    <style name="AppTheme.NoActionBarfull" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
 
 </resources>
