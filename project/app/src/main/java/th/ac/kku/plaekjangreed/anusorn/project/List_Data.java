@@ -6,12 +6,12 @@ public class List_Data {
     private String subject;
     private String linkPdf;
 
-    public  List_Data(){
+    public List_Data(){
 
 
     }
 
-    public List_Data(String image, String name, String subject,String linkPdf) {
+    public List_Data(String image, String name, String subject, String linkPdf) {
         this.image = image;
         this.name = name;
         this.subject = subject;

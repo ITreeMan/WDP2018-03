@@ -1,12 +1,10 @@
 package th.ac.kku.plaekjangreed.anusorn.project;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,8 +14,6 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
-
-import static android.support.v4.content.ContextCompat.startActivity;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
     private List<List_Data>listData;
@@ -48,11 +44,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
                 Context context = v.getContext();
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(ld.getLinkPdf()));
                 context.startActivity(intent);
-
             }
         });
-
-
     }
 
 

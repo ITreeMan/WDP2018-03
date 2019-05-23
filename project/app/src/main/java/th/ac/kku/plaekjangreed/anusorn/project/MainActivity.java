@@ -1,63 +1,69 @@
 package th.ac.kku.plaekjangreed.anusorn.project;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.support.v7.app.AppCompatActivity;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.webkit.WebView;
-import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.TextView;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import th.ac.kku.plaekjangreed.anusorn.project.ui.main.SectionsPagerAdapter;
+
+//import th.ac.kku.laksana.myapp.ui.main.SectionsPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
-    private Dialog dialogDiff;
-    private TextView exam;
-    private View diff;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
-        diff = (View) findViewById(R.id.diff);
-        diff.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                startActivity(new Intent(MainActivity.this,popup_diff.class));
-            }
-        });
+        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        ViewPager viewPager = findViewById(R.id.view_pager);
+        viewPager.setAdapter(sectionsPagerAdapter);
+        TabLayout tabs = findViewById(R.id.tabs);
+        tabs.setSelectedTabIndicatorColor(Color.parseColor("#D81B60"));
+        tabs.setBackgroundColor(Color.parseColor("#FFFFFF"));
+        tabs.setSelectedTabIndicatorHeight((int) (3 * getResources().getDisplayMetrics().density));
+        tabs.setTabTextColors(Color.parseColor("#727272"), Color.parseColor("#D81B60"));
 
 
-    }
+//        Drawable d = getResources().getDrawable(R.color.white);
+//        tabs.setBackgroundDrawable(d);
+        tabs.setupWithViewPager(viewPager);
 
-
-//    public void ShowPopupVideoDiff(View v) {
-//        TextView txtclose;
-//        dialogDiff.setContentView(R.layout.activity_popup_diff);
-//        txtclose = (TextView) dialogDiff.findViewById(R.id.closePopup);
-//        txtclose.setOnClickListener(new View.OnClickListener() {
+//        BottomNavigationView navigationView = findViewById(R.id.button_nev);
+//
+//        navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
 //            @Override
-//            public void onClick(View v) {
-//                dialogDiff.dismiss();
+//            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+//                int id = menuItem.getItemId();
+//                if(id == R.id.navigation_home){
+//
+//                    return true;
+//                }else if(id == R.id.navigation_scan){
+//                    openScanActivity();
+//                    return true;
+//                }else if(id == R.id.navigation_FAQ){
+//                    openFAQActivity();
+//                    return true;
+//                }
+//
+//                return false;
 //            }
 //        });
-//        dialogDiff.show();
-//        dialogDiff.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-//    }
 
-    public void goToTutorial(View v) {
-        openMainActivity();
-    }
 
-    public void goToExam(View v) {
-        openExamActivity();
     }
 
     public void goToHome(View v) {
@@ -67,35 +73,33 @@ public class MainActivity extends AppCompatActivity {
     public void goToFAQ (View v) {
         openFAQActivity();
     }
-    public void goTosearch(View v){
-        openSearchActivity();
+
+    public void goToSearch(View v) {
+        openScanActivity();
     }
 
-    private void openSearchActivity() {
+
+
+
+    private void openMainActivity() {
+
+    }
+
+    private void openScanActivity() {
         Intent intent = new Intent(this, SearchActivity.class);
         startActivity(intent);
         finish();
 
     }
 
-
-    private void openMainActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
-    }
-
-    private void openExamActivity() {
-        Intent intent = new Intent(this, ExamActivity.class);
-        startActivity(intent);
-        finish();
-    }
-
     private void openFAQActivity() {
         Intent intent = new Intent(this, FAQActivity.class);
         startActivity(intent);
         finish();
+
     }
+
+
 
 
 

@@ -1,20 +1,25 @@
 package th.ac.kku.plaekjangreed.anusorn.project;
+
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -25,19 +30,20 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
-public class SearchActivity extends AppCompatActivity {
+
+public class SearchActivity extends AppCompatActivity{
     public String TAG = "123";
-    private List<List_Data>listData;
+    private List<List_Data> listData;
     private RecyclerView rv;
     private MyAdapter adapter;
     private EditText etSearch;
     private ArrayList<List_Data> arrayList;
     private ImageButton btSearch;
-    @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
-
+//        BottomNavigationView navigationView = findViewById(R.id.button_nev);
         etSearch = (EditText) findViewById(R.id.search);
         btSearch = (ImageButton) findViewById(R.id.btOk);
         arrayList = new ArrayList<>();
@@ -70,7 +76,7 @@ public class SearchActivity extends AppCompatActivity {
         rv.setLayoutManager(new LinearLayoutManager(this));
         listData=new ArrayList<>();
 
-        final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("data");
+        final DatabaseReference nm = FirebaseDatabase.getInstance().getReference("data");
         nm.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -92,8 +98,38 @@ public class SearchActivity extends AppCompatActivity {
 
             }
         });
-//
+
+//        navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+//                int id = menuItem.getItemId();
+//                if(id == R.id.navigation_home){
+//                    openMainActivity();
+//                    return true;
+//                }else if(id == R.id.navigation_scan){
+//                    openScanActivity();
+//                    return true;
+//                }else if(id == R.id.navigation_FAQ){
+//                    openFAQActivity();
+//                    return true;
+//                }
+//                return false;
+//            }
+//        });
     }
+
+    public void goToHome(View v) {
+        openMainActivity();
+    }
+
+    public void goToFAQ (View v) {
+        openFAQActivity();
+    }
+
+    public void goToSearch(View v) {
+        openScanActivity();
+    }
+
 
     private void search(String s) {
         DatabaseReference myRef = FirebaseDatabase.getInstance().getReference().child("data");
@@ -131,48 +167,27 @@ public class SearchActivity extends AppCompatActivity {
 
 
 
-    public void goToTutorial(View v) {
-        openMainActivity();
-    }
-
-    public void goToExam(View v) {
-        openExamActivity();
-    }
-
-    public void goToHome(View v) {
-        openMainActivity();
-    }
-
-    public void goToFAQ (View v) {
-        openFAQActivity();
-    }
-    public void goTosearch(View v){
-        openSearchActivity();
-    }
-
-    private void openSearchActivity() {
-        Intent intent = new Intent(this, SearchActivity.class);
-        startActivity(intent);
-        finish();
-
-    }
-
-
     private void openMainActivity() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
     }
 
-    private void openExamActivity() {
-        Intent intent = new Intent(this, ExamActivity.class);
-        startActivity(intent);
-        finish();
+    private void openScanActivity() {
+
     }
 
     private void openFAQActivity() {
         Intent intent = new Intent(this, FAQActivity.class);
         startActivity(intent);
         finish();
+
     }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
 }

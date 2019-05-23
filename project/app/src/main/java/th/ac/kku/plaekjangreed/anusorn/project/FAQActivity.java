@@ -1,45 +1,50 @@
 package th.ac.kku.plaekjangreed.anusorn.project;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.NoCopySpan;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
+import android.view.ViewGroup;
 
-public class FAQActivity extends AppCompatActivity {
-    private static final int REQUEST_CODE = 10;
-    @Override
+public class FAQActivity extends AppCompatActivity{
+
+    int count_click = 0;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faq);
+//        BottomNavigationView navigationView = findViewById(R.id.button_nev);
+
+//        navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+//                int id = menuItem.getItemId();
+//                if(id == R.id.navigation_home){
+//                    openMainActivity();
+//                    return true;
+//                }else if(id == R.id.navigation_scan){
+//                    openScanActivity();
+//                    return true;
+//                }else if(id == R.id.navigation_FAQ){
+//                    openFAQActivity();
+//                    return true;
+//                }
+//                return false;
+//            }
+//        });
+
     }
 
 
-    public void okButtonClicked(View view) {
-        EditText EditTextAddress = (EditText) findViewById(R.id.editTextAddress);
-        EditText EditTextSubject = (EditText) findViewById(R.id.editTextSubject);
-        EditText EditTextMessage = (EditText) findViewById(R.id.editTextMessage);
-        // To do 1. create new intent
-        Intent intent = new Intent(FAQActivity.this, ConfirmFAQ.class);
-        // To do 2. put extra value with the intent
-        String address = String.valueOf(EditTextAddress.getText());
-        String subject = String.valueOf(EditTextSubject.getText());
-        String message = String.valueOf(EditTextMessage.getText());
-        intent.putExtra("address", address);
-        intent.putExtra("subject", subject);
-        intent.putExtra("message", message);
-        // To do 3. use startActivityForResult with REQUEST_CODE
-        startActivityForResult(intent, REQUEST_CODE);
-    }
 
 
-    public void goToTutorial(View v) {
-        openMainActivity();
-    }
-
-    public void goToExam(View v) {
-        openExamActivity();
-    }
 
     public void goToHome(View v) {
         openMainActivity();
@@ -49,18 +54,26 @@ public class FAQActivity extends AppCompatActivity {
         openFAQActivity();
     }
 
-    public void goTosearch(View v){ openSearchActivity();}
+    public void goToSearch(View v) {
+        openScanActivity();
+    }
 
+    public void goTologin(View v) {
+        count_click +=1;
+        Log.w("count : ",String.valueOf(count_click) );
 
-    private void openSearchActivity() {
-        Intent intent = new Intent(this, SearchActivity.class);
-        startActivity(intent);
-        finish();
+        if (count_click == 7) {
+            openLoginActivity();
+            count_click=0;
+        }
 
     }
 
-
-
+    private void openLoginActivity() {
+        Intent intent = new Intent(this, LogInActivity.class);
+        startActivity(intent);
+        finish();
+    }
 
     private void openMainActivity() {
         Intent intent = new Intent(this, MainActivity.class);
@@ -68,14 +81,19 @@ public class FAQActivity extends AppCompatActivity {
         finish();
     }
 
-    private void openExamActivity() {
-        Intent intent = new Intent(this, ExamActivity.class);
+    private void openScanActivity() {
+        Intent intent = new Intent(this, SearchActivity.class);
         startActivity(intent);
         finish();
     }
 
     private void openFAQActivity() {
-        Intent intent = new Intent(this, FAQActivity.class);
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
     }

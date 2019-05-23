@@ -3,7 +3,8 @@
     package="th.ac.kku.plaekjangreed.anusorn.project">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,14 +12,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SearchActivity"></activity>
-        <activity android:name=".ConfirmFAQ" />
-        <activity android:name=".FAQActivity" />
-        <activity android:name=".ExamActivity" />
+        <activity android:name=".NextActivity"></activity>
+        <activity android:name=".LogInActivity" />
         <activity
-            android:name=".popup_diff"
+            android:name=".openfullScreen"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBarfull" />
+        <activity
+            android:name=".popUpActivity2"
             android:theme="@style/AppTheme.CustomTheme" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".popUpActivity"
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity
+            android:name=".FAQActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SearchActivity"
+            android:label="@string/title_activity_search"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

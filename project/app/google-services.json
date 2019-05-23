@@ -8,17 +8,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:676552659226:android:7e36d0fdcba17331",
+        "mobilesdk_app_id": "1:676552659226:android:a73b8342903aa0d3",
         "android_client_info": {
-          "package_name": "th.ac.kku.angwatananon.laksana.testlaksana"
+          "package_name": "th.ac.kku.laksana.myapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "676552659226-7raal6ovbg785vrdbcbq2gqas8hds8vh.apps.googleusercontent.com",
+          "client_id": "676552659226-hv56khepv6anf40d4ffk9ljhottt1g0g.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "th.ac.kku.angwatananon.laksana.testlaksana",
+            "package_name": "th.ac.kku.laksana.myapp",
             "certificate_hash": "3f97032c8b99789fd60fc7851864eaae446f4486"
           }
         },
@@ -51,6 +51,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "676552659226-louurelog8qkhgkki0qj14reo67a49im.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "th.ac.kku.plaekjangreed.anusorn.project",
+            "certificate_hash": "88d581204c2e2cbc56aff3a73745536e06e83e9c"
+          }
+        },
         {
           "client_id": "676552659226-iogbmh0mhp70fpdp5m1qsvbbdot4mrnm.apps.googleusercontent.com",
           "client_type": 3

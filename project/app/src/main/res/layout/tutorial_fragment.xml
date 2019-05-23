@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <LinearLayout
+        android:id="@+id/layout_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="80dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/colorRedApp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_space_left_subject"
+            android:layout_marginTop="20dp">
+
+            <ScrollView
+                android:id="@+id/scroll_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:fillViewport="true"
+                android:measureAllChildren="false"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layout_calculus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_space_left_subject"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_space_subject_bottom_book"
+                            android:text="@string/tv_calculus"
+                            android:textColor="@color/colorSubject"
+                            android:textSize="@dimen/tv_subject" />
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:fillViewport="true"
+                            android:measureAllChildren="false"
+                            android:scrollbars="none">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:id="@+id/diff"
+                                    android:onClick="onClick"
+                                    android:layout_width="@dimen/v_book_width"
+                                    android:layout_height="@dimen/v_book_height"
+                                    android:layout_marginRight="@dimen/margin_space_book"
+                                    android:background="@drawable/cover_diff"
+                                    android:elevation="5dp"
+                                    android:padding="5dp" />
+
+                                <View
+                                    android:id="@+id/laplaceTransform"
+                                    android:onClick="onClick"
+                                    android:layout_width="@dimen/v_book_width"
+                                    android:layout_height="@dimen/v_book_height"
+                                    android:layout_marginRight="@dimen/margin_space_book"
+                                    android:background="@drawable/laplace" />
+
+                                <!--<View-->
+                                    <!--android:layout_width="@dimen/v_book_width"-->
+                                    <!--android:layout_height="@dimen/v_book_height"-->
+                                    <!--android:layout_marginRight="@dimen/margin_space_book"-->
+                                    <!--android:background="@color/colorSubject" />-->
+
+                                <!--<View-->
+                                    <!--android:layout_width="@dimen/v_book_width"-->
+                                    <!--android:layout_height="@dimen/v_book_height"-->
+                                    <!--android:layout_marginRight="@dimen/margin_space_book"-->
+                                    <!--android:background="@color/colorSubject" />-->
+
+                                <!--<View-->
+                                    <!--android:layout_width="@dimen/v_book_width"-->
+                                    <!--android:layout_height="@dimen/v_book_height"-->
+                                    <!--android:layout_marginRight="@dimen/margin_space_book"-->
+                                    <!--android:background="@color/colorSubject" />-->
+
+                            </LinearLayout>
+
+                        </HorizontalScrollView>
+                    </LinearLayout>
+                    <View
+                        style="@style/Divider.HorizontalRed"
+                        android:layout_marginTop="@dimen/margin_line_top"
+                        android:layout_marginRight="@dimen/margin_space_left_subject"
+                        />
+                    <LinearLayout
+                        android:id="@+id/layout_physics"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_space_left_subject"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_space_subject_bottom_book"
+                            android:text="@string/tv_physics"
+                            android:textColor="@color/colorSubject"
+                            android:textSize="@dimen/tv_subject" />
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:fillViewport="true"
+                            android:measureAllChildren="false"
+                            android:scrollbars="none">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <!--<View-->
+                                    <!--android:layout_width="@dimen/v_book_width"-->
+                                    <!--android:layout_height="@dimen/v_book_height"-->
+                                    <!--android:layout_marginRight="@dimen/margin_space_book"-->
+                                    <!--android:background="@color/colorSubject" />-->
+
+                                <!--<View-->
+                                    <!--android:layout_width="@dimen/v_book_width"-->
+                                    <!--android:layout_height="@dimen/v_book_height"-->
+                                    <!--android:layout_marginRight="@dimen/margin_space_book"-->
+                                    <!--android:background="@color/colorSubject" />-->
+
+                                <!--<View-->
+                                    <!--android:layout_width="@dimen/v_book_width"-->
+                                    <!--android:layout_height="@dimen/v_book_height"-->
+                                    <!--android:layout_marginRight="@dimen/margin_space_book"-->
+                                    <!--android:background="@color/colorSubject" />-->
+
+                                <View
+                                    android:layout_width="@dimen/v_book_width"
+                                    android:layout_height="@dimen/v_book_height"
+                                    android:layout_marginRight="@dimen/margin_space_book"
+                                     />
+
+
+
+                            </LinearLayout>
+
+                        </HorizontalScrollView>
+                    </LinearLayout>
+
+                    <View
+                        style="@style/Divider.HorizontalRed"
+                        android:layout_marginTop="@dimen/margin_line_top"
+                        android:layout_marginRight="@dimen/margin_space_left_subject"
+                        />
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_comPro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_space_left_subject"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_space_subject_bottom_book"
+                            android:text="@string/tv_comPro"
+                            android:textColor="@color/colorSubject"
+                            android:textSize="@dimen/tv_subject" />
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:fillViewport="true"
+                            android:measureAllChildren="false"
+                            android:scrollbars="none">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <!--<View-->
+                                    <!--android:layout_width="@dimen/v_book_width"-->
+                                    <!--android:layout_height="@dimen/v_book_height"-->
+                                    <!--android:layout_marginRight="@dimen/margin_space_book"-->
+                                    <!--android:background="@color/colorSubject" />-->
+
+                                <!--<View-->
+                                    <!--android:layout_width="@dimen/v_book_width"-->
+                                    <!--android:layout_height="@dimen/v_book_height"-->
+                                    <!--android:layout_marginRight="@dimen/margin_space_book"-->
+                                    <!--android:background="@color/colorSubject" />-->
+
+                                <!--<View-->
+                                    <!--android:layout_width="@dimen/v_book_width"-->
+                                    <!--android:layout_height="@dimen/v_book_height"-->
+                                    <!--android:layout_marginRight="@dimen/margin_space_book"-->
+                                    <!--android:background="@color/colorSubject" />-->
+
+                                <View
+                                    android:layout_width="@dimen/v_book_width"
+                                    android:layout_height="@dimen/v_book_height"
+                                    android:layout_marginRight="@dimen/margin_space_book"
+                                    />
+
+
+                            </LinearLayout>
+
+                        </HorizontalScrollView>
+                    </LinearLayout>
+
+                    <View
+                        style="@style/Divider.HorizontalRed"
+                        android:layout_marginTop="@dimen/margin_line_top"
+                        android:layout_marginRight="@dimen/margin_space_left_subject"
+                        />
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_Chem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_space_left_subject"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_space_subject_bottom_book"
+                            android:text="@string/tv_Chem"
+                            android:textColor="@color/colorSubject"
+                            android:textSize="@dimen/tv_subject" />
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:fillViewport="true"
+                            android:measureAllChildren="false"
+                            android:scrollbars="none">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <!--<View-->
+                                    <!--android:layout_width="@dimen/v_book_width"-->
+                                    <!--android:layout_height="@dimen/v_book_height"-->
+                                    <!--android:layout_marginRight="@dimen/margin_space_book"-->
+                                    <!--android:background="@color/colorSubject" />-->
+
+                                <View
+                                    android:layout_width="@dimen/v_book_width"
+                                    android:layout_height="@dimen/v_book_height"
+                                    android:layout_marginRight="@dimen/margin_space_book"
+                                    />
+
+
+                            </LinearLayout>
+
+                        </HorizontalScrollView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_blank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_space_left_subject"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:fillViewport="true"
+                            android:measureAllChildren="false"
+                            android:scrollbars="none">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:layout_width="@dimen/v_book_width"
+                                    android:layout_height="@dimen/v_book_height"
+                                    android:layout_marginRight="@dimen/margin_space_book" />
+                            </LinearLayout>
+                        </HorizontalScrollView>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

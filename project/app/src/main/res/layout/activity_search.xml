@@ -4,54 +4,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchActivity">
-   <LinearLayout
-       android:id="@+id/line1"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:orientation="horizontal"
-       android:weightSum="5">
-       <LinearLayout
-           android:layout_weight="0.5"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content">
-           <ImageButton
-               android:id="@+id/btOk"
-               android:background="@android:color/transparent"
-               android:src="@drawable/searchicon"
-               android:layout_marginTop="10dp"
-               android:layout_marginLeft="20dp"
-               android:layout_width="50dp"
-               android:layout_height="50dp"
-               android:scaleType="fitXY" />
-       </LinearLayout>
-
-       <EditText
-           android:id="@+id/search"
-           android:layout_weight="4.5"
-           android:layout_width="0dp"
-           android:layout_marginRight="15dp"
-           android:background="@drawable/search_bar"
-           android:layout_marginTop="10dp"
-           android:padding="10dp"
-           android:layout_height="50dp" />
+    tools:context=".SearchActivity"
+    android:background="@color/white">
 
 
-   </LinearLayout>
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="@color/colorAccent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:minHeight="?actionBarSize"
+            android:padding="@dimen/appbar_padding"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/appbar_text_size"
+            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
+
+        <!--<android.support.design.widget.TabLayout-->
+            <!--android:id="@+id/tabs"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/colorAccent"-->
+            <!--/>-->
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_below="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:background="@color/white">
+
+
+        <LinearLayout
+            android:layout_weight="0.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+            <ImageButton
+                android:id="@+id/btOk"
+                android:background="@drawable/icon_search_app_theme"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_weight="4.5"
+            android:layout_height="40dp"
+            android:layout_width="0dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/search_bar_frame_app_theme"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:textColor="@color/colorAccent"
+            />
+
+
+    </LinearLayout>
 
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
         android:layout_below="@+id/line1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
 
 
-    <View
-        style="@style/Divider.Horizontal"
-        android:layout_above="@+id/layout_menu" />
+    <!--<android.support.design.widget.BottomNavigationView-->
+        <!--android:id="@+id/button_nev"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="@color/white"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:itemTextColor="@color/colorAccent"-->
+        <!--app:menu="@menu/nav_menu"></android.support.design.widget.BottomNavigationView>-->
 
     <LinearLayout
         android:id="@+id/layout_menu"
@@ -63,26 +104,26 @@
         android:weightSum="2">
 
         <TextView
-            android:id="@+id/btn_home"
+            android:onClick="goToHome"
+            android:id="@+id/navigation_home"
             android:layout_width="0dp"
             android:layout_height="@dimen/btn_menu_bottom_height"
             android:layout_alignParentBottom="true"
             android:layout_weight="1"
             android:background="@color/white"
             android:gravity="center"
-            android:onClick="goToHome"
             android:text="@string/tv_home"
             android:textColor="@color/colorRedApp"
             android:textSize="@dimen/tv_bottom_menu" />
 
         <TextView
             android:onClick="goToFAQ"
+            android:id="@+id/navigation_FAQ"
             android:layout_width="0dp"
             android:layout_height="@dimen/btn_menu_bottom_height"
             android:layout_weight="1"
             android:background="@color/white"
             android:gravity="center"
-
             android:text="@string/tv_faq"
             android:textColor="@color/colorRedApp"
             android:textSize="@dimen/tv_bottom_menu" />
@@ -95,7 +136,8 @@
         android:layout_centerHorizontal="true">
 
         <View
-            android:id="@+id/btn_search"
+            android:onClick="goToSearch"
+            android:id="@+id/navigation_scan"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
@@ -105,18 +147,29 @@
 
             />
 
-        <com.airbnb.lottie.LottieAnimationView
+        <!--<com.airbnb.lottie.LottieAnimationView-->
+        <!--android:id="@+id/animation_search"-->
+        <!--android:layout_width="70dp"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--app:lottie_autoPlay="true"-->
+        <!--app:lottie_fileName="animation-w600-h600.json"-->
+        <!--app:lottie_loop="true" />-->
+
+        <View
             android:id="@+id/animation_search"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
             android:layout_centerHorizontal="true"
-            app:lottie_autoPlay="true"
-            app:lottie_fileName="animation-w600-h600.json"
-            app:lottie_loop="true" />
-        </RelativeLayout>
+            android:background="@drawable/icon_search"
+            />
 
+
+    </RelativeLayout>
 
 
 </RelativeLayout>

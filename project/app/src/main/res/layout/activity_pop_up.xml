@@ -1,0 +1,117 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="250dp"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_gravity="center"
+    android:elevation="5dp"
+    android:padding="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_space_right_subject"
+            android:layout_marginLeft="@dimen/margin_space_left_subject">
+
+            <TextView
+                android:id="@+id/titleVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_diff"
+                android:textSize="@dimen/tv_top_menu"
+                android:layout_gravity="center"/>
+            <TextView
+                android:onClick="goToHome"
+                android:id="@+id/closePopup"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"
+                android:text="X"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ViewFlipper
+                android:id="@+id/flipper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <VideoView
+                    android:id="@+id/videoView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp" />
+                <VideoView
+                    android:id="@+id/videoView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp" />
+                <VideoView
+                    android:id="@+id/videoView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp" />
+                <VideoView
+                    android:id="@+id/videoView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp" />
+
+            </ViewFlipper>
+
+
+            <Button
+                android:onClick="openPdf"
+                android:id="@+id/btPDF"
+                android:layout_below="@+id/flipper"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:text="@string/btn_pdf"
+                android:textSize="@dimen/tv_subject"
+                android:textColor="@color/white"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/botton_styles"
+                />
+            <Button
+                android:id="@+id/btfull"
+                android:onClick="ShowpopupVideoDiff"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:text="@string/btn_video"
+                android:textSize="@dimen/tv_subject"
+                android:layout_margin="10dp"
+                android:layout_toLeftOf="@+id/btPDF"
+                android:textColor="@color/white"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/botton_styles"
+                />
+            <Button
+                android:id="@+id/nextPart"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:textColor="@color/white"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorAccent"
+                android:layout_toRightOf="@+id/previousPart"
+                android:textSize="10dp"
+                android:text="next"
+                />
+            <Button
+                android:id="@+id/previousPart"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:layout_width="60dp"
+                android:background="@color/colorAccent"
+                android:layout_alignParentBottom="true"
+                android:layout_height="30dp"
+                android:text="previous"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

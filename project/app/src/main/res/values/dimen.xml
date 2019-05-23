@@ -23,4 +23,8 @@
     <dimen name="v_book_width">82.67dp</dimen>
     <dimen name="v_book_height">116.93dp</dimen>
     <dimen name="btn_menu_bottom_height">50dp</dimen>
+
+
+
+
 </resources>

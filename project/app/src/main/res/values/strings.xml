@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">TutorENKKU</string>
+    <string name="tab_text_1">Tutorial</string>
+    <string name="tab_text_2">Exam</string>
     <string name="tv_home">Home</string>
     <string name="tv_faq">FAQ</string>
     <string name="tv_tutorial">Tutorial</string>
@@ -9,11 +11,12 @@
     <string name="tv_comPro">Computer Programming</string>
     <string name="tv_com">Calculus</string>
     <string name="tv_diff">Differential Equation</string>
+    <string name="tv_laplace">Laplace Transform</string>
     <string name="tv_Chem">Chemistry</string>
 
 
     <string name="btn_pdf">PDF</string>
-    <string name="btn_video">Video</string>
+    <string name="btn_video">full screen</string>
     <string name="faq">FAQ</string>
     <string name="any_question">Any Question?</string>
     <string name="mail">Email Address</string>
@@ -25,6 +28,48 @@
 
     <string name="head_Lorem_Ipsum">Lorem Ipsum.</string>
     <string name="message_Lorem_Ipsum">	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="title_activity_search">SearchActivity</string>
+
+    <string name="faq1">How to watch full screen video?</string>
+    <string name="faq1_1">1. Open tutorial video.</string>
+    <string name="faq1_2">2. Select FULL SCREEN. </string>
+
+    <string name="faq2">How to watch next or previous video?</string>
+    <string name="faq2_1">1. Open tutorial video.</string>
+    <string name="faq2_2">2. Select NEXT or PREVIOUS. </string>
+
+    <string name="faq3">What is EXAM ? </string>
+    <string name="faq3_1"> EXAM is solution of exam. EXAM have the Video and PDF file. </string>
+
+    <string name="faq4">How to use search function </string>
+    <string name="faq4_1"> 1. Choose icon search for open search function </string>
+    <string name="faq4_2"> 2. Enter the exam , problem or question </string>
+    <string name="faq4_3"> For example </string>
+    <string name="faq4_4"> - Xe^2 </string>
+    <string name="faq4_5"> - X= sqrt(y) </string>
+    <string name="faq4_6"> - จงหาศักย์ไฟฟ้า </string>
+
+
+    <string name="faq5"> How do I  search for integrate  </string>
+    <string name="faq5_1"> You should integrate(X) or integrate(x^2) from 0 to 5 for Definite Integral</string>
+
+    <string name="faq6"> How do I  search for differential equations  </string>
+    <string name="faq6_1"> You should diff(X)  </string>
+
+    <string name="faq7"> How do I  search for Square Root  </string>
+    <string name="faq7_1"> You should sqrt(X)  </string>
+
+    <string name="faq8"> How do I  search for n Root   </string>
+    <string name="faq8_1"> You should nrt(n,X)  </string>
+
+    <string name="faq9"> How do I  search for the n power    </string>
+    <string name="faq9_1"> You should X^n  </string>
+    <string name="faq9_2"> For example 2^2 , X^2 , X^5 etc. </string>
+
+    <string-array name="videoDiff">
+        <item>part 1</item>
+        <item>part 2</item>
+        <item>part 3</item>
+    </string-array>
 
 </resources>
-

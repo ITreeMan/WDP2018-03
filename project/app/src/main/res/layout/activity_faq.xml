@@ -5,61 +5,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FAQActivity"
+    android:background="@color/white">
 
-    >
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="@color/colorAccent">
+
+        <TextView
+            android:onClick="goTologin"
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:minHeight="?actionBarSize"
+            android:padding="@dimen/appbar_padding"
+            android:text="@string/faq"
+            android:textColor="@color/white"
+            android:textSize="@dimen/appbar_text_size"
+            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
+
+        <!--<android.support.design.widget.TabLayout-->
+        <!--android:id="@+id/tabs"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/colorAccent"-->
+        <!--/>-->
+    </android.support.design.widget.AppBarLayout>
+
+
 
     <LinearLayout
+        android:layout_below="@+id/app_bar"
         android:id="@+id/layout_all"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="80dp">
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:background="@color/colorRedApp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_top_app"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <com.airbnb.lottie.LottieAnimationView
-                    android:id="@+id/animation_view"
-                    android:layout_marginTop="@dimen/margin_top_app"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_centerInParent="true"
-                    android:layout_marginBottom="@dimen/margin_top_app"
-                    app:lottie_autoPlay="true"
-                    app:lottie_fileName="fix.json"
-                    app:lottie_loop="true"
-                    android:scaleX="-1"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:layout_centerInParent="true"
-                    android:gravity="center"
-                    android:text="@string/app_name"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/app_name" />
-
-            </LinearLayout>
-        </RelativeLayout>
-
-        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/margin_space_left_subject"
-            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
             android:layout_marginRight="@dimen/margin_space_right_subject">
 
             <ScrollView
@@ -79,90 +68,252 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/head_Lorem_Ipsum"
+                        android:text="@string/faq1"
                         android:textSize="@dimen/tv_head_faq"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/message_Lorem_Ipsum"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/faq1_1"
                         android:textSize="@dimen/tv_message_faq"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/head_Lorem_Ipsum"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/faq1_2"
+                        android:textSize="@dimen/tv_message_faq"/>
+                    <View
+                        style="@style/Divider.HorizontalRed"
+                        android:layout_marginTop="@dimen/margin_line_top"
+                        android:layout_marginRight="@dimen/margin_space_left_subject"
+                        android:layout_marginBottom="10dp"
+                        />
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/faq2"
                         android:textSize="@dimen/tv_head_faq"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/message_Lorem_Ipsum"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/faq2_1"
                         android:textSize="@dimen/tv_message_faq"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/head_Lorem_Ipsum"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/faq2_2"
+                        android:textSize="@dimen/tv_message_faq"/>
+                    <View
+                        style="@style/Divider.HorizontalRed"
+                        android:layout_marginTop="@dimen/margin_line_top"
+                        android:layout_marginRight="@dimen/margin_space_left_subject"
+                        android:layout_marginBottom="10dp"
+                        />
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/faq3"
                         android:textSize="@dimen/tv_head_faq"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/message_Lorem_Ipsum"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/faq3_1"
                         android:textSize="@dimen/tv_message_faq"/>
+                    <View
+                        style="@style/Divider.HorizontalRed"
+                        android:layout_marginTop="@dimen/margin_line_top"
+                        android:layout_marginRight="@dimen/margin_space_left_subject"
+                        android:layout_marginBottom="10dp"
+                        />
 
-                    <LinearLayout
+
+
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:focusable="true"
-                        android:focusableInTouchMode="true"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:layout_marginTop="@dimen/margin_top_any_question">
+                        android:layout_height="wrap_content"
+                        android:text="@string/faq4"
+                        android:textSize="@dimen/tv_head_faq"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/faq4_1"
+                        android:textSize="@dimen/tv_message_faq"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/faq4_2"
+                        android:textSize="@dimen/tv_message_faq"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/faq4_3"
+                        android:textSize="@dimen/tv_message_faq"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/faq4_4"
+                        android:textSize="@dimen/tv_message_faq"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/faq4_5"
+                        android:textSize="@dimen/tv_message_faq"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/faq4_6"
+                        android:textSize="@dimen/tv_message_faq"/>
+                    <View
+                        style="@style/Divider.HorizontalRed"
+                        android:layout_marginTop="@dimen/margin_line_top"
+                        android:layout_marginRight="@dimen/margin_space_left_subject"
+                        android:layout_marginBottom="10dp"
+                        />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/any_question"
-                            android:textSize="30dp" />
 
-                        <requestFocus />
 
-                        <EditText
-                            android:id="@+id/editTextAddress"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="15"
-                            android:freezesText="true"
-                            android:hint="@string/mail"
-                            android:inputType="textEmailAddress"
-                            android:singleLine="true" />
 
-                        <EditText
-                            android:id="@+id/editTextSubject"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="15"
-                            android:freezesText="true"
-                            android:hint="@string/subject"
-                            android:singleLine="true" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/faq5"
+                        android:textSize="@dimen/tv_head_faq"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/faq5_1"
+                        android:textSize="@dimen/tv_message_faq"/>
+                    <View
+                        style="@style/Divider.HorizontalRed"
+                        android:layout_marginTop="@dimen/margin_line_top"
+                        android:layout_marginRight="@dimen/margin_space_left_subject"
+                        android:layout_marginBottom="10dp"
+                        />
 
-                        <EditText
-                            android:id="@+id/editTextMessage"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ems="15"
-                            android:freezesText="true"
-                            android:hint="@string/message"
-                            android:lines="6" />
 
-                        <Button
-                            android:id="@+id/buttonIntent"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="send"
-                            android:onClick="okButtonClicked"/>
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="70dp" />
-                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/faq6"
+                        android:textSize="@dimen/tv_head_faq"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/faq6_1"
+                        android:textSize="@dimen/tv_message_faq"/>
+                    <View
+                        style="@style/Divider.HorizontalRed"
+                        android:layout_marginTop="@dimen/margin_line_top"
+                        android:layout_marginRight="@dimen/margin_space_left_subject"
+                        android:layout_marginBottom="10dp"
+                        />
+
+
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/faq7"
+                        android:textSize="@dimen/tv_head_faq"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/faq7_1"
+                        android:textSize="@dimen/tv_message_faq"/>
+                    <View
+                        style="@style/Divider.HorizontalRed"
+                        android:layout_marginTop="@dimen/margin_line_top"
+                        android:layout_marginRight="@dimen/margin_space_left_subject"
+                        android:layout_marginBottom="10dp"
+                        />
+
+
+
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/faq8"
+                        android:textSize="@dimen/tv_head_faq"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/faq8_1"
+                        android:textSize="@dimen/tv_message_faq"/>
+                    <View
+                        style="@style/Divider.HorizontalRed"
+                        android:layout_marginTop="@dimen/margin_line_top"
+                        android:layout_marginRight="@dimen/margin_space_left_subject"
+                        android:layout_marginBottom="10dp"
+                        />
+
+
+
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/faq9"
+                        android:textSize="@dimen/tv_head_faq"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/faq9_1"
+                        android:textSize="@dimen/tv_message_faq"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/faq9_2"
+                        android:textSize="@dimen/tv_message_faq"/>
+                    <View
+                        style="@style/Divider.HorizontalRed"
+                        android:layout_marginTop="@dimen/margin_line_top"
+                        android:layout_marginRight="@dimen/margin_space_left_subject"
+                        android:layout_marginBottom="10dp"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        ></View>
+
+
+
+
                 </LinearLayout>
 
             </ScrollView>
@@ -172,10 +323,14 @@
 
     </LinearLayout>
 
-    <View
-        style="@style/Divider.Horizontal"
-        android:layout_above="@+id/layout_menu" />
-
+    <!--<android.support.design.widget.BottomNavigationView-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="@color/white"-->
+        <!--android:id="@+id/button_nev"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:itemTextColor="@color/colorAccent"-->
+        <!--app:menu="@menu/nav_menu"></android.support.design.widget.BottomNavigationView>-->
     <LinearLayout
         android:id="@+id/layout_menu"
         android:layout_width="match_parent"
@@ -186,26 +341,26 @@
         android:weightSum="2">
 
         <TextView
-            android:id="@+id/btn_home"
+            android:onClick="goToHome"
+            android:id="@+id/navigation_home"
             android:layout_width="0dp"
             android:layout_height="@dimen/btn_menu_bottom_height"
             android:layout_alignParentBottom="true"
             android:layout_weight="1"
             android:background="@color/white"
             android:gravity="center"
-            android:onClick="goToHome"
             android:text="@string/tv_home"
             android:textColor="@color/colorRedApp"
             android:textSize="@dimen/tv_bottom_menu" />
 
         <TextView
             android:onClick="goToFAQ"
+            android:id="@+id/navigation_FAQ"
             android:layout_width="0dp"
             android:layout_height="@dimen/btn_menu_bottom_height"
             android:layout_weight="1"
             android:background="@color/white"
             android:gravity="center"
-
             android:text="@string/tv_faq"
             android:textColor="@color/colorRedApp"
             android:textSize="@dimen/tv_bottom_menu" />
@@ -218,7 +373,8 @@
         android:layout_centerHorizontal="true">
 
         <View
-            android:id="@+id/btn_search"
+            android:onClick="goToSearch"
+            android:id="@+id/navigation_scan"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
@@ -228,16 +384,30 @@
 
             />
 
-        <com.airbnb.lottie.LottieAnimationView
+        <!--<com.airbnb.lottie.LottieAnimationView-->
+        <!--android:id="@+id/animation_search"-->
+        <!--android:layout_width="70dp"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--app:lottie_autoPlay="true"-->
+        <!--app:lottie_fileName="animation-w600-h600.json"-->
+        <!--app:lottie_loop="true" />-->
+
+        <View
             android:id="@+id/animation_search"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
             android:layout_centerHorizontal="true"
-            app:lottie_autoPlay="true"
-            app:lottie_fileName="animation-w600-h600.json"
-            app:lottie_loop="true" />
+            android:background="@drawable/icon_search"
+            />
+
+
     </RelativeLayout>
+
+
 
 </RelativeLayout>
